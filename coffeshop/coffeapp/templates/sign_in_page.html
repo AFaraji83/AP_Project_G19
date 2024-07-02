@@ -1,0 +1,63 @@
+<!doctype html>
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{%static 'css/sign_in_page.css'%}" />
+</head>
+{% block content %}
+
+<main class="sign-in-page">
+  <div class="logo-container">
+    <img src="{% static 'images/coffee_shop_logo_whithout_background_1.png' %}" alt="coffee shop logo" class="logo" style="max-width: 150px; max-height: 150px;">
+  </div>
+  <div class="text">
+    <div class="sign-in">
+      Sign in
+    </div>
+    <span class="please-login-to-continue-to-your-account">
+      Please login to continue to your account.
+    </span>
+  </div>
+  <form method="POST" action="" class="login-form" novalidate>
+    {% csrf_token %}
+    <div class="form">
+      <div class="input">
+        <div class="container">
+          {{ form.username }}
+        </div>
+        <div class="label">
+          <span class="username">
+            {{ form.username.label }}
+          </span>
+        </div>
+      </div>
+      <div class="input-1">
+        {{ form.password }}
+        <span class="password">
+          {{ form.password.label }}
+        </span>
+        <div class="eye-off">
+          <img class="icon" src="{% static 'vectors/icon_15_x2.svg' %}" />
+        </div>
+      </div>
+      {% if form.errors %}
+        <div class="error-message">
+          {{ form.non_field_errors }}
+        </div>
+      {% endif %}
+      <button type="submit" class="button" value='signin'>
+        <span class="sign-in-1">
+          Sign in
+        </span>
+      </button>
+    </div>
+  </form>
+</main>
+<script>
+  document.querySelector('.login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (this.checkValidity()) {
+      this.submit();
+    }
+  });
+</script>
+{% endblock content %}

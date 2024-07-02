@@ -1,0 +1,635 @@
+.sales-managment .site-name {
+  margin: 11px 15px 11px 0;
+  display: inline-block;
+  width: 875px;
+  overflow-wrap: break-word;
+  font-family: var(--body-text-font-family, 'Inter');
+  font-weight: var(--body-text-font-weight, 500);
+  font-size: var(--body-text-font-size, 20px);
+  line-height: var(--body-text-line-height, 1.5);
+  color: #000000;
+}
+.sales-managment .page {
+  margin: 11px 48.8px 11px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: var(--body-text-font-family, 'Inter');
+  font-weight: var(--body-text-font-weight, 500);
+  font-size: var(--body-text-font-size, 20px);
+  line-height: var(--body-text-line-height, 1.5);
+  color: #000000;
+}
+.sales-managment .page-1 {
+  margin: 11px 48.8px 11px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: var(--body-text-font-family, 'Inter');
+  font-weight: var(--body-text-font-weight, 500);
+  font-size: var(--body-text-font-size, 20px);
+  line-height: var(--body-text-line-height, 1.5);
+  color: #000000;
+}
+.sales-managment .page-2 {
+  margin: 11px 48.8px 11px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: var(--body-text-font-family, 'Inter');
+  font-weight: var(--body-text-font-weight, 500);
+  font-size: var(--body-text-font-size, 20px);
+  line-height: var(--body-text-line-height, 1.5);
+  color: #000000;
+}
+.sales-managment .button-1 {
+  overflow-wrap: break-word;
+  font-family: var(--small-text-font-family, 'Inter');
+  font-weight: var(--small-text-font-weight, 500);
+  font-size: var(--small-text-font-size, 16px);
+  line-height: var(--small-text-line-height, 1.5);
+  color: #FFFFFF;
+}
+.sales-managment .button {
+  box-shadow: var(--button-shadow, 0px 1px 2px 0px rgba(0, 0, 0, 0.05));
+  border-radius: 8px;
+  background: #000000;
+  display: flex;
+  padding: 14px 0px 14px 0;
+  width: 99px;
+  box-sizing: border-box;
+}
+.sales-managment .items {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.sales-managment .container-8 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1280px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.sales-managment .sign-out-squre-light {
+  width: 24px;
+  height: 24px;
+}
+.sales-managment .home {
+  width: 24px;
+  height: 24px;
+}
+.sales-managment .items-1 {
+  margin: 40px 0 36px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 96px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.sales-managment .coffee-shop-logo-whithout-background-1 {
+  mix-blend-mode: darken;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/coffee_shop_logo_whithout_background_1.png') 50% / cover no-repeat;
+  width: 100px;
+  height: 100px;
+}
+.sales-managment .vector {
+  background: #1B1B1B;
+  margin-bottom: 8.5px;
+  width: 30px;
+  height: 1.5px;
+}
+.sales-managment .vector-1 {
+  background: #1B1B1B;
+  margin-bottom: 8.5px;
+  width: 30px;
+  height: 1.5px;
+}
+.sales-managment .vector-2 {
+  background: #1B1B1B;
+  width: 30px;
+  height: 1.5px;
+}
+.sales-managment .menu-3 {
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.sales-managment .button-2 {
+  border-radius: 8px;
+  margin: 40.5px 0 38px 0;
+  display: flex;
+  width: 30px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.sales-managment .navigation-1 {
+  background: #DEA54B;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: -23px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 108px 44px 112px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.sales-managment .navigation {
+  background: #FFFFFF;
+  position: relative;
+  display: flex;
+  padding: 56px 80px 33px 80px;
+  width: 1440px;
+  box-sizing: border-box;
+}
+.sales-managment .container-13 {
+  margin: 0 1px 42px 1.4px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-12 {
+  margin: 0 1px 42px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-11 {
+  margin: 0 0 42px 1.3px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-10 {
+  margin: 0 0 42px 0.6px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-9 {
+  margin: 0 0 42px 0.8px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-8 {
+  margin: 0 0 42px 1.4px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-7 {
+  margin: 0 3px 0 1.3px;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-1 {
+  margin: 264px 29.5px 269px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.sales-managment .container-18 {
+  margin: 0 0 10px 49.5px;
+  display: inline-block;
+  align-self: center;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.5;
+  color: #49271D;
+}
+.sales-managment .vector-101 {
+  margin: 8px 17.1px 14px 0;
+  width: 20px;
+  height: 10px;
+}
+.sales-managment .container-15 {
+  margin: 4px 27px 0 0;
+  display: inline-block;
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: rgba(0, 0, 0, 0.75);
+}
+.sales-managment .date-range-duotone-1 {
+  margin-bottom: 8px;
+  width: 24px;
+  height: 24px;
+}
+.sales-managment .frame-43 {
+  border-radius: 25px;
+  background: #D9D9D9;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  padding: 9px 12px 1px 20px;
+  box-sizing: border-box;
+}
+.sales-managment .vector-10 {
+  margin: 8px 0 14px 0;
+  width: 20px;
+  height: 10px;
+}
+.sales-managment .container-14 {
+  margin: 4px 27px 0 0;
+  display: inline-block;
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: rgba(0, 0, 0, 0.75);
+}
+.sales-managment .date-range-duotone {
+  margin-bottom: 8px;
+  width: 24px;
+  height: 24px;
+}
+.sales-managment .container {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.sales-managment .frame-42 {
+  border-radius: 25px;
+  background: #D9D9D9;
+  margin-right: 39px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 9px 12px 1px 20px;
+  width: 200px;
+  box-sizing: border-box;
+}
+.sales-managment .october {
+  margin-right: 15px;
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 0.5;
+  color: rgba(43, 48, 52, 0.4);
+}
+.sales-managment .shape {
+  width: 15px;
+  height: 9px;
+}
+.sales-managment .icon-chevron-down {
+  margin: 3px 0 8px 0;
+  display: flex;
+  width: 15px;
+  height: 9px;
+  box-sizing: border-box;
+}
+.sales-managment .month-selector {
+  border-radius: 4px;
+  border: 0.6px solid #D5D5D5;
+  background: #FCFDFD;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 14px 0 8px 0;
+  width: 121px;
+  box-sizing: border-box;
+}
+.sales-managment .container-6 {
+  margin-bottom: 91px;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.sales-managment .bar-6 {
+  border-radius: 17.4px 17.4px 0 0;
+  background: #57532F;
+  margin: 0 99.2px 0px 0;
+  width: 34.7px;
+  height: 407px;
+}
+.sales-managment .bar-5 {
+  border-radius: 17.4px 17.4px 0 0;
+  background: #57532F;
+  margin: 193.5px 99.2px 0 0;
+  width: 34.7px;
+  height: 213.5px;
+}
+.sales-managment .bar-4 {
+  border-radius: 17.4px 17.4px 0 0;
+  background: #57532F;
+  margin: 250.2px 99.2px 0px 0;
+  width: 34.7px;
+  height: 156.8px;
+}
+.sales-managment .bar-3 {
+  border-radius: 17.4px 17.4px 0 0;
+  background: #57532F;
+  margin: 70.1px 99.2px 0px 0;
+  width: 34.7px;
+  height: 336.9px;
+}
+.sales-managment .bar-2 {
+  border-radius: 17.4px 17.4px 0 0;
+  background: #57532F;
+  margin: 140.1px 99.2px 0px 0;
+  width: 34.7px;
+  height: 266.9px;
+}
+.sales-managment .bar-1 {
+  border-radius: 17.4px 17.4px 0 0;
+  background: #57532F;
+  margin: 223.5px 79.3px 0px 0;
+  width: 34.7px;
+  height: 183.5px;
+}
+.sales-managment .bar {
+  border-radius: 17.4px 17.4px 0 0;
+  background: #57532F;
+  margin: 180.1px 0 0px 0;
+  width: 34.7px;
+  height: 226.9px;
+}
+.sales-managment .bar-1 {
+  margin: 0 60px 27px 3.5px;
+  display: flex;
+  flex-direction: row;
+  width: 818px;
+  box-sizing: border-box;
+}
+.sales-managment .container {
+  margin-right: 14px;
+  width: 118.2px;
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-1 {
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-2 {
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-3 {
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-4 {
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-5 {
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-6 {
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .container-3 {
+  margin: 0 46px 50px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 835.5px;
+  box-sizing: border-box;
+}
+.sales-managment .ellipse-4 {
+  border-radius: 8px;
+  background: #FFFFFF;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+.sales-managment .default {
+  margin: 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .radio-button {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.sales-managment .ellipse-5 {
+  border-radius: 4px;
+  background: #000000;
+  width: 8px;
+  height: 8px;
+}
+.sales-managment .group-6 {
+  border-radius: 8px;
+  background: #FFFFFF;
+  position: relative;
+  margin: 0 10.5px 13px 0;
+  display: flex;
+  padding: 4px;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.sales-managment .default-1 {
+  margin-top: 1px;
+  display: inline-block;
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .radio-button-1 {
+  margin-right: 8px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.sales-managment .ellipse-42 {
+  border-radius: 8px;
+  background: #FFFFFF;
+  margin: 0 11.4px 13px 0;
+  width: 16px;
+  height: 16px;
+}
+.sales-managment .default-2 {
+  margin-top: 1px;
+  display: inline-block;
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.7;
+  color: #000000;
+}
+.sales-managment .radio-button-2 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.sales-managment .container-2 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.sales-managment .radio-group {
+  position: relative;
+  margin: 0 28px;
+  display: flex;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.sales-managment .container-4 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.sales-managment .vector-11 {
+  background: #000000;
+  position: absolute;
+  left: 1.5px;
+  bottom: 134px;
+  width: 819.5px;
+  height: 1px;
+}
+.sales-managment .container-5 {
+  position: relative;
+  margin: 23px 110px 104px 0;
+  display: flex;
+  box-sizing: border-box;
+}
+.sales-managment .container-16 {
+  position: relative;
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 19.5px;
+  line-height: 1.5;
+  color: #000000;
+}
+.sales-managment .container-17 {
+  position: absolute;
+  top: 61.5px;
+  right: 17px;
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 19.5px;
+  line-height: 1.5;
+  color: #000000;
+}
+.sales-managment .plugin-icon-1 {
+  background: #DEDAC7;
+  position: relative;
+  display: flex;
+  padding: 4.5px 17px 0 17px;
+  width: 227px;
+  height: 883px;
+  box-sizing: border-box;
+}
+.sales-managment .container-7 {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.sales-managment {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 1440px;
+  box-sizing: border-box;
+}

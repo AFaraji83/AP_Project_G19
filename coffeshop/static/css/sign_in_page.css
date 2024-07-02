@@ -1,0 +1,184 @@
+.sign-in-page .coffee-shop-logo-whithout-background-2 {
+  background: url('../assets/images/coffee_shop_logo_whithout_background_1.png') 50% / cover no-repeat;
+  margin: 0 263.3px 32px 0;
+  width: 135.7px;
+  height: 125px;
+}
+.sign-in-page .sign-in {
+  margin: 0 0.1px 12px 0.1px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -1.6px;
+  line-height: 1.1;
+  color: #232323;
+}
+.sign-in-page .please-login-to-continue-to-your-account {
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #969696;
+}
+.sign-in-page .text {
+  margin: 0 52.6px 32px 0;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.sign-in-page .jonas-kahnwaldgmail-com {
+  margin-right: 2.9px;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #232323;
+}
+.sign-in-page .container {
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #232323;
+}
+.sign-in-page .container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.sign-in-page .username {
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #424220;
+}
+.sign-in-page .label {
+  background: #FFFFFF;
+  position: absolute;
+  left: 12px;
+  top: -10.5px;
+  display: flex;
+  padding: 0 4.6px 0 4px;
+  box-sizing: border-box;
+}
+.sign-in-page .input {
+  border-radius: 10px;
+  border: 1.5px solid #424220;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 14.5px;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.sign-in-page .password {
+  margin-right: 13.5px;
+  width: 331.7px;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #9A9A9A;
+}
+.sign-in-page .icon {
+  width: 19.7px;
+  height: 18px;
+}
+.sign-in-page .eye-off {
+  margin: 4.5px 0;
+  display: flex;
+  width: 19.7px;
+  height: 18px;
+  box-sizing: border-box;
+}
+.sign-in-page .input-1 {
+  border-radius: 10px;
+  border: 1px solid #D9D9D9;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 17.2px 15px 15px;
+  width: 399px;
+  box-sizing: border-box;
+}
+.sign-in-page .container-2 {
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #6C6C6C;
+}
+.container-2 {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration-line: underline;
+  line-height: 1.333;
+  color: #424220;
+}
+.sign-in-page .keep {
+  margin-bottom: 20px;
+  display: flex;
+  box-sizing: border-box;
+}
+.sign-in-page .sign-in-1 {
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+.sign-in-page .button {
+  border-radius: 10px;
+  background: #424220;
+  display: flex;
+  padding: 16px 0.3px 16px 0;
+  width: 399px;
+  box-sizing: border-box;
+}
+.sign-in-page .form {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.sign-in-page .container-1 {
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #6C6C6C;
+}
+.container-1 {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration-line: underline;
+  line-height: 1.333;
+  color: #424220;
+}
+.sign-in-page {
+  background: #F2EFE9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 217px 0;
+  box-sizing: border-box;
+}

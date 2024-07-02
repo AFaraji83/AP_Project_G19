@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+  {% for product in products %}
+  <a href="">
+    <div class="image-1">
+      {{product.avatar }}
+    </div>
+    <div class="product-1">
+      {{product}}
+    </div>
+    
+    <span class="container-1">
+    هزار تومان{{product.price}}
+    </span>
+  </a>
+  
+  {% endfor %}
+</div>
+
+{% endblock content%}

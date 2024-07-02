@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+  {% for product in products %}
+    <div class="image-1">
+      {{product.avatar }}
+    </div>
+    <div class="product-1">
+      {{product.name}}
+    </div>
+    
+    <span class="container-1">
+    هزار تومان{{product.price}}
+    </span>
+  
+  {% endfor %}
+</div>
+<div>
+  <h3>فیلتر ها</h3>
+  <hr>
+  <div>
+    {% comment %} {% for product in products %}
+    {% if product.vertical not in displayed_verticals %}
+        <div>{{ product.vertical }}</div>
+        {% set displayed_verticals = displayed_verticals|merge({product.vertical: true}) %}
+    {% endif %}
+{% endfor %} {% endcomment %}
+    {%for product in products%}
+    <div>
+      {{product.vertical}}
+
+
+
+
+
+
+    </div>
+      {% endfor %}
+    {% comment %} {% for price in product_prices %}
+    <div>
+      {{price}}
+
+
+
+    </div>
+    {% endfor %}
+  </div> {% endcomment %}
+</div>
+{% endblock content%}

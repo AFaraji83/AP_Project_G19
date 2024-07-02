@@ -1,0 +1,472 @@
+.shoping-history .site-name {
+  margin: 11px 15px 11px 0;
+  display: inline-block;
+  width: 875px;
+  overflow-wrap: break-word;
+  font-family: var(--body-text-font-family, 'Inter');
+  font-weight: var(--body-text-font-weight, 500);
+  font-size: var(--body-text-font-size, 20px);
+  line-height: var(--body-text-line-height, 1.5);
+  color: #000000;
+}
+.shoping-history .page {
+  margin: 11px 48.8px 11px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: var(--body-text-font-family, 'Inter');
+  font-weight: var(--body-text-font-weight, 500);
+  font-size: var(--body-text-font-size, 20px);
+  line-height: var(--body-text-line-height, 1.5);
+  color: #000000;
+}
+.shoping-history .page-1 {
+  margin: 11px 48.8px 11px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: var(--body-text-font-family, 'Inter');
+  font-weight: var(--body-text-font-weight, 500);
+  font-size: var(--body-text-font-size, 20px);
+  line-height: var(--body-text-line-height, 1.5);
+  color: #000000;
+}
+.shoping-history .page-2 {
+  margin: 11px 48.8px 11px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: var(--body-text-font-family, 'Inter');
+  font-weight: var(--body-text-font-weight, 500);
+  font-size: var(--body-text-font-size, 20px);
+  line-height: var(--body-text-line-height, 1.5);
+  color: #000000;
+}
+.shoping-history .button-1 {
+  overflow-wrap: break-word;
+  font-family: var(--small-text-font-family, 'Inter');
+  font-weight: var(--small-text-font-weight, 500);
+  font-size: var(--small-text-font-size, 16px);
+  line-height: var(--small-text-line-height, 1.5);
+  color: #FFFFFF;
+}
+.shoping-history .button {
+  box-shadow: var(--button-shadow, 0px 1px 2px 0px rgba(0, 0, 0, 0.05));
+  border-radius: 8px;
+  background: #000000;
+  display: flex;
+  padding: 14px 0px 14px 0;
+  width: 99px;
+  box-sizing: border-box;
+}
+.shoping-history .items-1 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.shoping-history .container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1280px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.shoping-history .sign-out-squre-light {
+  width: 24px;
+  height: 24px;
+}
+.shoping-history .trolly {
+  width: 24px;
+  height: 24px;
+}
+.shoping-history .wallet {
+  width: 24px;
+  height: 24px;
+}
+.shoping-history .items-2 {
+  margin: 40px 0 36px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 168px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.shoping-history .coffee-shop-logo-whithout-background-1 {
+  mix-blend-mode: darken;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/coffee_shop_logo_whithout_background_1.png') 50% / cover no-repeat;
+  width: 100px;
+  height: 100px;
+}
+.shoping-history .vector-7 {
+  background: #1B1B1B;
+  margin-bottom: 8.5px;
+  width: 30px;
+  height: 1.5px;
+}
+.shoping-history .vector-8 {
+  background: #1B1B1B;
+  margin-bottom: 8.5px;
+  width: 30px;
+  height: 1.5px;
+}
+.shoping-history .vector-9 {
+  background: #1B1B1B;
+  width: 30px;
+  height: 1.5px;
+}
+.shoping-history .menu-3 {
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.shoping-history .button-2 {
+  border-radius: 8px;
+  margin: 40.5px 0 38px 0;
+  display: flex;
+  width: 30px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.shoping-history .navigation-1 {
+  background: #DEA54B;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: -23px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 108px 44px 111px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.shoping-history .navigation {
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 51px;
+  display: flex;
+  padding: 56px 80px 33px 80px;
+  width: 1440px;
+  box-sizing: border-box;
+}
+.shoping-history .container {
+  margin: 0 108px 14px 108px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #000000;
+}
+.shoping-history .divider-1 {
+  background: #E3E3E3;
+  margin: 0 107.5px 17.3px 114px;
+  width: 1218.5px;
+  height: 1.2px;
+}
+.shoping-history .container-3 {
+  margin: 169.5px 12px 8.5px 0;
+  display: inline-block;
+  width: 596.1px;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.75);
+}
+.shoping-history .container-2 {
+  margin: 57px 43px 0 0;
+  display: inline-block;
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 19.5px;
+  line-height: 1.5;
+  color: #000000;
+}
+.shoping-history .a-3-b-4-c-82-fd-811 {
+  border-radius: 100px;
+  background: url('../assets/images/a_3_b_4_c_82_fd_8111.jpeg') 50% / cover no-repeat;
+  margin: 77.5px 25px 24.5px 0;
+  width: 100px;
+  height: 100px;
+}
+.shoping-history .container-1 {
+  position: relative;
+  margin: 0 0 19.5px 7.9px;
+  display: inline-block;
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 19.5px;
+  line-height: 1.5;
+  color: #000000;
+}
+.shoping-history .ad-3-f-048-df-761 {
+  border-radius: 50.5px;
+  background: url('../assets/images/ad_3_f_048_df_761.jpeg') 50% / cover no-repeat;
+  margin-right: 6px;
+  width: 100px;
+  height: 100px;
+}
+.shoping-history .container-2 {
+  margin-bottom: 24.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.shoping-history .container-7 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.shoping-history .container-6 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1182.5px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.shoping-history .vector-10 {
+  background: #000000;
+  position: absolute;
+  left: 0px;
+  top: 54.5px;
+  right: 0px;
+  height: 1px;
+}
+.shoping-history .component-4 {
+  position: relative;
+  margin: 0 109px 73.5px 118px;
+  display: flex;
+  padding: 0 19px 0 11.5px;
+  width: 1213px;
+  box-sizing: border-box;
+}
+.shoping-history .container-4 {
+  margin: 0 19px 11px 19px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 19.5px;
+  line-height: 1.5;
+  color: #000000;
+}
+.shoping-history .vector-101 {
+  background: #000000;
+  margin-bottom: 1.5px;
+  width: 1213px;
+  height: 1px;
+}
+.shoping-history .container-6 {
+  margin: 112.5px 12px 8.5px 0;
+  display: inline-block;
+  width: 472.5px;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.75);
+}
+.shoping-history .container-5 {
+  margin-right: 43px;
+  text-align: right;
+  overflow-wrap: break-word;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 19.5px;
+  line-height: 1.5;
+  color: #000000;
+}
+.shoping-history .a-3-b-4-c-82-fd-8111 {
+  border-radius: 100px;
+  background: url('../assets/images/a_3_b_4_c_82_fd_811.jpeg') 50% / cover no-repeat;
+  margin: 20.5px 25px 24.5px 0;
+  width: 100px;
+  height: 100px;
+}
+.shoping-history .ad-3-f-048-df-7611 {
+  border-radius: 50.5px;
+  background: url('../assets/images/ad_3_f_048_df_7611.jpeg') 50% / cover no-repeat;
+  margin: 20.5px 0 24.5px 0;
+  width: 100px;
+  height: 100px;
+}
+.shoping-history .container-3 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.shoping-history .container-1 {
+  margin: 0 25px 0 11.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1176.5px;
+  box-sizing: border-box;
+}
+.shoping-history .component-5 {
+  margin: 0 116px 67.5px 111px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.shoping-history .divider {
+  background: #E6E6E6;
+  margin: 0 18px 46px 3px;
+  width: 1280px;
+  height: 1px;
+}
+.shoping-history .coffee-shop-logo-whithout-background-2 {
+  background: url('../assets/images/coffee_shop_logo_whithout_background_1.png') 50% / cover no-repeat;
+  width: 135.7px;
+  height: 125px;
+}
+.shoping-history .union {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 134.8px;
+  height: 75.4px;
+}
+.shoping-history .union-1 {
+  width: 158.3px;
+  height: 71px;
+}
+.shoping-history .items {
+  position: relative;
+  margin: 2.3px 0 47.3px 0;
+  display: flex;
+  padding: 2.2px 0;
+  width: 357.1px;
+  height: 75.4px;
+  box-sizing: border-box;
+}
+.shoping-history .container-5 {
+  margin-bottom: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1301px;
+  box-sizing: border-box;
+}
+.shoping-history .icon {
+  width: 20px;
+  height: 19.9px;
+}
+.shoping-history .buttons-icon {
+  border-radius: 4px;
+  margin: 0px 0;
+  display: flex;
+  width: 20px;
+  height: 19.9px;
+  box-sizing: border-box;
+}
+.shoping-history .icon-1 {
+  width: 18px;
+  height: 18px;
+}
+.shoping-history .buttons-icon-1 {
+  border-radius: 4px;
+  margin: 1px 0;
+  display: flex;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+.shoping-history .icon-2 {
+  width: 20px;
+  height: 14px;
+}
+.shoping-history .buttons-icon-2 {
+  border-radius: 4px;
+  margin: 3px 0;
+  display: flex;
+  width: 20px;
+  height: 14px;
+  box-sizing: border-box;
+}
+.shoping-history .icon-3 {
+  width: 20px;
+  height: 20px;
+}
+.shoping-history .buttons-icon-3 {
+  border-radius: 4px;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+}
+.shoping-history .social-icons {
+  margin: 0 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-start;
+  width: 164px;
+  box-sizing: border-box;
+}
+.shoping-history .navigation-footer {
+  background: #57532F;
+  display: flex;
+  flex-direction: column;
+  padding: 1px 62px 27px 77px;
+  width: 1440px;
+  box-sizing: border-box;
+}
+.shoping-history .container-4 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.shoping-history .arrow {
+  background: url('../assets/images/arrow.png') 50% / contain no-repeat;
+  position: absolute;
+  top: 195px;
+  right: 217.2px;
+  width: 33.8px;
+  height: 32.8px;
+}
+.shoping-history .rectangle-25 {
+  border-radius: 35px;
+  background: #D9D9D9;
+  position: absolute;
+  left: 112px;
+  right: 115px;
+  bottom: 296px;
+  height: 205px;
+}
+.shoping-history .rectangle-24 {
+  border-radius: 35px;
+  background: #D9D9D9;
+  position: absolute;
+  left: 118px;
+  top: 267px;
+  right: 109px;
+  height: 205px;
+}
+.shoping-history {
+  background: #FFFFFF;
+  display: flex;
+  width: 1440px;
+  box-sizing: border-box;
+}

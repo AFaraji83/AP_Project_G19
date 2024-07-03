@@ -35,4 +35,8 @@ class AdminsForm(forms.ModelForm):
 class StorageForm(forms.ModelForm):
     class Meta:
         model = Storage
-        fields = ['name', 'amount']
+        fields = ['coffee', 'sugar', 'chocolate', 'flour']
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.initial = ''

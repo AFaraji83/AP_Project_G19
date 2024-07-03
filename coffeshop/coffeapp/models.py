@@ -99,4 +99,8 @@ class Admins(models.Model):
 class Storage(models.Model):
     NAME_CHOICES= [('sugar','sugar'), ('coffee','coffee'), ('flour','flour'), ('chocolate','chocolate')]
     name = models.CharField(choices=NAME_CHOICES, max_length=255, unique=True, primary_key=True)
-    amount = models.IntegerField()
+    amount = models.IntegerField(default=0)
+    coffee = models.IntegerField(default=0)
+    sugar = models.IntegerField(default=0)
+    chocolate = models.IntegerField(default=0)
+    flour = models.IntegerField(default=0)

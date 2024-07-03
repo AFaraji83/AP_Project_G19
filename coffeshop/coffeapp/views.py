@@ -113,7 +113,12 @@ def manageProduct(request):
         form = StorageForm(request.POST, instance=storage)
         if form.is_valid():
             form.save()
-        return redirect('dashboard')
+            storage.coffee += form.cleaned_data['coffee']
+            storage.sugar += form.cleaned_data['sugar']
+            storage.chocolate += form.cleaned_data['chocolate']
+            storage.flour += form.cleaned_data['flour']
+            storage.save()
+        return redirect('coffeapp:manage-product')
     else:
         form = StorageForm(instance=storage)
 
@@ -122,3 +127,7 @@ def manageProduct(request):
     context={'form': form}
     return render(request, 'manage-product.html', context)
 
+
+def salesManagment(request):
+    context={}
+    return render(request, 'sales-managment.html', context)

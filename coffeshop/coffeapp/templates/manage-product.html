@@ -2,12 +2,16 @@
 
 
 {% block content %}
-
+<p>Current Coffee: {{ storage.coffee }}</p>
+<p>Current Sugar: {{ storage.sugar }}</p>
+<p>Current Chocolate: {{ storage.chocolate }}</p>
+<p>Current Flour: {{ storage.flour }}</p>
 <div>
-  {% for s in storage %}
-  {{s}}
-  
-  {% endfor %}
+  <form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit", value='Update'>Update</button>
+</form>
 </div>
 
 

@@ -147,43 +147,42 @@ def add_to_cart(request, product_id):
         product = Products.objects.get(id=product_id)
     except Products.DoesNotExist:
         product = None
-    
-    if request.method == 'POST':
-        form = AddToCartForm(request.POST)
+    quantity = 1
+
+    # بررسی موجودی انبار
+    ingredients = {
+        'sugar': product.sugar * quantity,
+        'coffee': product.coffee * quantity,
+        'flour': product.flour * quantity,
+        'chocolate': product.chocolate * quantity
+    }
+    storage = Storage.objects.first()
         
-        if form.is_valid():
-            quantity = form.cleaned_data['quantity']
-            
-            # بررسی موجودی انبار
-            ingredients = {
-                'sugar': product.sugar * quantity,
-                'coffee': product.coffee * quantity,
-                'flour': product.flour * quantity,
-                'chocolate': product.chocolate * quantity
-            }
-            
-            for ingredient, amount in ingredients.items():
-                storage = Storage.objects.get(name=ingredient)
-                if storage.amount < amount:
-                    messages.error(request, f'موجودی {ingredient} کافی نیست.')
-                    return redirect('product_detail', product_id=product_id)
-            
-            cart, created = Cart.objects.get_or_create(user=request.user)
-            cart_item, created = CartItem.objects.get_or_create(cart=cart, product=product)
-            
-            if not created:
-                cart_item.quantity += quantity
-                cart_item.save()
-            else:
-                cart_item.quantity = quantity
-                cart_item.save()
-            
-            messages.success(request, 'محصول به سبد خرید اضافه شد.')
-            return redirect('view_cart')
-        else:
-            return render(request, 'add_to_cart.html', {'form': form, 'product': product})
+    if storage.coffee < product.coffee:
+        messages.error(request, f'موجودی قهوه کافی نیست.')
+        return HttpResponse('Not allowed')
+    elif storage.sugar < product.sugar:
+        messages.error(request, f'موجودی شکر کافی نیست.')
+        return HttpResponse('Not allowed')
+    elif storage.chocolate < product.chocolate:
+        messages.error(request, f'موجودی شکلات کافی نیست.')
+        return HttpResponse('Not allowed')
+    elif storage.flour < product.flour:
+        messages.error(request, f'موجودی آرد کافی نیست.')
+        return HttpResponse('Not allowed')
+    
+    cart, created = Cart.objects.get_or_create(user=request.user)
+    cart_item, created = CartItem.objects.get_or_create(cart=cart, product=product)
+    
+    if not created:
+        cart_item.quantity += quantity
+        cart_item.save()
     else:
-        return HttpResponseNotAllowed(['POST'], 'Only POST method is allowed.')
+        cart_item.quantity = quantity
+        cart_item.save()
+    
+    messages.success(request, 'محصول به سبد خرید اضافه شد.')
+    return redirect('coffeapp:cart')
 
 
 

@@ -14,6 +14,8 @@
     <span class="container-1">
     هزار تومان{{product.price}}
     </span>
+
+    <a class="buy-now-button" href="{% url 'coffeapp:add_to_cart' product_id=product.id %}">Add to Cart</a>
   
   {% endfor %}
 </div>
@@ -31,7 +33,7 @@
     <li>
       <a href="{% url 'coffeapp:products-page' %}?q{{product.vertical}}">{{product.vertical}}</a>
 
-      <a href="{% url 'coffeapp:add-to-cart'product_id=product.id %}">Add to Cart</a>
+      
 
 
 

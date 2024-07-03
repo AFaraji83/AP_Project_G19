@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>صفحه مدیریت فروشگاه</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>نمودار فروش</h2>
+        <div id="chart"></div>
+
+        <h2>لیست فروش</h2>
+        <ul>
+        {% for sale in sales %}
+            <li>{{ sale.product.name }} - قیمت: {{ sale.price }} - تعداد: {{ sale.amount }}</li>
+        {% endfor %}
+        
+        
+        <h2>لیست محصولات</h2>
+        <ul>
+        {% for product in products %}
+            <li>{{ product.name }} - موجودی: {{ product.amount }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="col-md-4">
+        <h2>مدیریت انبار</h2>
+        <ul>
+        {% for item in storage_data %}
+            <li>{{ item.name }}: {{ item.amount }}</li>
+        {% endfor %}
+        </ul>
+        
+        <h2>اضافه کردن محصول</h2>
+        <a href="{% url 'coffeapp:new-product' %}" class="btn btn-primary">افزودن محصول جدید</a>
+    </div>
+</div>
+{% endblock %}

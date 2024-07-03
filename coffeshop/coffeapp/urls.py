@@ -10,12 +10,17 @@ urlpatterns = [
     path('logout/', views.logoutUser, name="logout"),
     path('register/', views.registerPage, name="register"),
     path('', views.home, name= 'home'),
-    path('new-product/', views.createProduct, name='new-product'),
-    path('products-page.', views.productsPage, name='products-page'),
-    path('manage-product/',views.manageProduct, name='manage-product'),
+    path('new-product', views.createProduct, name='new-product'),
+    path('products-page', views.productsPage, name='products-page'),
+
     path('cart/', views.view_cart, name='cart'),
     path('add-to-cart/<int:product_id>/', views.add_to_cart, name='add_to_cart'),
-    path('checkout/', views.checkout, name='checkout'),]
+    path('checkout/', views.checkout, name='checkout'),
+    path('order-history/', views.order_history, name='order_history'),
+    
+    path('store-management/', views.store_management, name='store_management'),
+]
+
 
 
 urlpatterns+= static(settings.MEDIA_URL, documnet_root= settings.MEDIA_ROOT)

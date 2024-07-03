@@ -199,3 +199,13 @@ def checkout(request):
         return redirect('order_confirmation')
     
     return redirect('view_cart')
+
+
+
+@login_required
+def order_history(request):
+    if request.method == 'GET':
+        orders = Orders.objects.filter(username=request.user.username).order_by('-order_id')
+        return render(request, 'order_history.html', {'orders': orders})
+    else:
+        return redirect('coffeapp:order_history')

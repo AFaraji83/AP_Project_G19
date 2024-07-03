@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>صفحه‌ی سوابق خرید</h2>
+
+<p>سفارش های شما:</p>
+
+{% if orders %}
+    <table>
+        <thead>
+            <tr>
+                <th>شماره سفارش</th>
+                <th>محصولات</th>
+                <th>مبلغ خرید</th>
+                <th>نوع سفارش</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.order_id }}</td>
+                <td>{{ order.products }}</td>
+                <td>{{ order.purchase_amount }}</td>
+                <td>{% if order.type %}حضوری{% else %}آنلاین{% endif %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>شما هنوز سفارشی ثبت نکرده‌اید.</p>
+{% endif %}
+{% endblock %}

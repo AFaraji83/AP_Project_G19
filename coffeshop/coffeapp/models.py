@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 
 
 def validate_phone_number(value):
-    if len(str(value)) != 10:
+    if len(str(value)) == 10:
         raise ValidationError('Phone number must be exactly 10 digits')
 
 class User(AbstractUser):
@@ -97,10 +97,6 @@ class Admins(models.Model):
         ordering = ('-username',)
 
 class Storage(models.Model):
-    NAME_CHOICES= [(sugar), (coffee), (flour), (chocolate)]
-    id = models.IntegerField(primary_key=True, db_column='id', validators=[MinValueValidator(1), MaxValueValidator(10)], unique=True)
-    name = models.CharField(choices=NAME_CHOICES, max_length=255, unique=True)
-    amount = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
-
-    class Meta:
-        ordering = ('-id',)
+    NAME_CHOICES= [('sugar','sugar'), ('coffee','coffee'), ('flour','flour'), ('chocolate','chocolate')]
+    name = models.CharField(choices=NAME_CHOICES, max_length=255, unique=True, primary_key=True)
+    amount = models.IntegerField()

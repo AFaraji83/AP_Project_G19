@@ -53,7 +53,7 @@ def signin(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('coffeapp: home')
+    return redirect('coffeapp:home')
 
 
 def registerPage(request):
@@ -108,7 +108,14 @@ def createProduct(request):
 
 def manageProduct(request):
     form =StorageForm(request.POST)
-
+    storage = Storage.objects.first()  # assuming only one Storage object
+    if request.method == 'POST':
+        form = StorageForm(request.POST, instance=storage)
+        if form.is_valid():
+            form.save()
+        return redirect('dashboard')
+    else:
+        form = StorageForm(instance=storage)
 
 
 

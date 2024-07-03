@@ -19,6 +19,15 @@
   </div>
   <form method="POST" action="" class="login-form" novalidate>
     {% csrf_token %}
+
+    <label>Username:</label>
+    <input type="text" name="username" placeholder="Enter Username" />
+
+    <label>Password:</label>
+    <input type="password" name="password" placeholder="Enter Password" />
+
+    <input type="submit" value="Login" />
+
     <div class="form">
       <div class="input">
         <div class="container">

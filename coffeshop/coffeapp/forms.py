@@ -36,3 +36,7 @@ class StorageForm(forms.ModelForm):
     class Meta:
         model = Storage
         fields = ['name', 'amount']
+
+
+class AddToCartForm(forms.Form):
+    quantity = forms.IntegerField(min_value=1, max_value=10)

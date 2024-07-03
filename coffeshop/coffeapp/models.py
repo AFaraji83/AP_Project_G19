@@ -100,3 +100,12 @@ class Storage(models.Model):
     NAME_CHOICES= [('sugar','sugar'), ('coffee','coffee'), ('flour','flour'), ('chocolate','chocolate')]
     name = models.CharField(choices=NAME_CHOICES, max_length=255, unique=True, primary_key=True)
     amount = models.IntegerField()
+
+class Cart(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class CartItem(models.Model):
+    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
+    product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)

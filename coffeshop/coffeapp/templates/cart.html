@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>سبد خرید</h1>
+{% if items %}
+    <ul>
+    {% for item in items %}
+        <li>{{ item.product.name }} - تعداد: {{ item.quantity }} - قیمت: {{ item.product.price }}</li>
+    {% endfor %}
+    </ul>
+    <p>مجموع: {{ total }}</p>
+    <form method="post" action="{% url 'checkout' %}">
+        {% csrf_token %}
+        <label>نوع سفارش:</label>
+        <select name="order_type">
+            <option value="takeaway">بیرون بر</option>
+            <option value="dine_in">حضوری</option>
+        </select>
+        <button type="submit">پرداخت</button>
+    </form>
+{% else %}
+    <p>سبد خرید شما خالی است.</p>
+{% endif %}
+{% endblock %}

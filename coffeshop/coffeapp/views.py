@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.db.models import Sum
+from django.db.models.functions import TruncDate
 from django.db.models import Q
 from django.contrib.auth import authenticate, login, logout
 from .forms import *
@@ -124,47 +126,64 @@ def manageProduct(request):
 
 @login_required
 def view_cart(request):
-    cart, created = Cart.objects.get_or_create(user=request.user)
-    items = CartItem.objects.filter(cart=cart)
-    total = sum(item.product.price * item.quantity for item in items)
-    return render(request, 'cart.html', {'items': items, 'total': total})
+    try:
+        cart = Cart.objects.get(user=request.user)
+    except Cart.DoesNotExist:
+        cart = None
+    
+    if request.method == 'GET':
+        if cart:
+            items = CartItem.objects.filter(cart=cart)
+            total = sum(item.product.price * item.quantity for item in items)
+            return render(request, 'cart.html', {'items': items, 'total': total})
+        else:
+            return render(request, 'cart.html', {'items': [], 'total': 0})
+    else:
+        return HttpResponseNotAllowed(['GET'], 'Only GET method is allowed.')
 
 @login_required
 def add_to_cart(request, product_id):
-    product = Products.objects.get(id=product_id)
-    form = AddToCartForm(request.POST or None)
+    try:
+        product = Products.objects.get(id=product_id)
+    except Products.DoesNotExist:
+        product = None
     
-    if form.is_valid():
-        quantity = form.cleaned_data['quantity']
+    if request.method == 'POST':
+        form = AddToCartForm(request.POST)
         
-        # بررسی موجودی انبار
-        ingredients = {
-            'sugar': product.sugar * quantity,
-            'coffee': product.coffee * quantity,
-            'flour': product.flour * quantity,
-            'chocolate': product.chocolate * quantity
-        }
-        
-        for ingredient, amount in ingredients.items():
-            storage = Storage.objects.get(name=ingredient)
-            if storage.amount < amount:
-                messages.error(request, f'موجودی {ingredient} کافی نیست.')
-                return redirect('product_detail', product_id=product_id)
-        
-        cart, created = Cart.objects.get_or_create(user=request.user)
-        cart_item, created = CartItem.objects.get_or_create(cart=cart, product=product)
-        
-        if not created:
-            cart_item.quantity += quantity
-            cart_item.save()
+        if form.is_valid():
+            quantity = form.cleaned_data['quantity']
+            
+            # بررسی موجودی انبار
+            ingredients = {
+                'sugar': product.sugar * quantity,
+                'coffee': product.coffee * quantity,
+                'flour': product.flour * quantity,
+                'chocolate': product.chocolate * quantity
+            }
+            
+            for ingredient, amount in ingredients.items():
+                storage = Storage.objects.get(name=ingredient)
+                if storage.amount < amount:
+                    messages.error(request, f'موجودی {ingredient} کافی نیست.')
+                    return redirect('product_detail', product_id=product_id)
+            
+            cart, created = Cart.objects.get_or_create(user=request.user)
+            cart_item, created = CartItem.objects.get_or_create(cart=cart, product=product)
+            
+            if not created:
+                cart_item.quantity += quantity
+                cart_item.save()
+            else:
+                cart_item.quantity = quantity
+                cart_item.save()
+            
+            messages.success(request, 'محصول به سبد خرید اضافه شد.')
+            return redirect('view_cart')
         else:
-            cart_item.quantity = quantity
-            cart_item.save()
-        
-        messages.success(request, 'محصول به سبد خرید اضافه شد.')
-        return redirect('view_cart')
-    
-    return render(request, 'add_to_cart.html', {'form': form, 'product': product})
+            return render(request, 'add_to_cart.html', {'form': form, 'product': product})
+    else:
+        return HttpResponseNotAllowed(['POST'], 'Only POST method is allowed.')
 
 
 
@@ -199,3 +218,36 @@ def checkout(request):
         return redirect('order_confirmation')
     
     return redirect('view_cart')
+
+
+
+@login_required
+def order_history(request):
+    if request.method == 'GET':
+        orders = Orders.objects.filter(username=request.user.username).order_by('-order_id')
+        return render(request, 'order_history.html', {'orders': orders})
+    else:
+        return redirect('coffeapp:order_history')
+
+
+
+@login_required(login_url='coffeapp:signin')
+def store_management(request):
+    if request.method == 'GET':
+        # نمودار فروش
+        sales_data = Orders.objects.annotate(date=TruncDate('created_at')).values('date').annotate(total_sales=Sum('purchase_amount')).order_by('date')
+        
+        # اطلاعات انبار
+        storage_data = Storage.objects.all()
+        
+        # لیست محصولات
+        products = Products.objects.all()
+        
+        context = {
+            'sales_data': sales_data,
+            'storage_data': storage_data,
+            'products': products,
+        }
+        return render(request, 'store_management.html', context)
+    else:
+        return redirect('coffeapp:store_management')

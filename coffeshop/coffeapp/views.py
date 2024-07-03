@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotAllowed
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Sum
@@ -115,7 +115,7 @@ def manageProduct(request):
         form = StorageForm(request.POST, instance=storage)
         if form.is_valid():
             form.save()
-        return redirect('dashboard')
+        return redirect('coffeapp:manage-product')
     else:
         form = StorageForm(instance=storage)
 
@@ -206,10 +206,10 @@ def checkout(request):
         # کم کردن از موجودی انبار
         for item in items:
             product = item.product
-            Storage.objects.filter(name='sugar').update(amount=F('amount') - product.sugar * item.quantity)
-            Storage.objects.filter(name='coffee').update(amount=F('amount') - product.coffee * item.quantity)
-            Storage.objects.filter(name='flour').update(amount=F('amount') - product.flour * item.quantity)
-            Storage.objects.filter(name='chocolate').update(amount=F('amount') - product.chocolate * item.quantity)
+            Storage.objects.filter(name='sugar').update(amount=f'{'amount'}' - product.sugar * item.quantity)
+            Storage.objects.filter(name='coffee').update(amount=f'{'amount'}' - product.coffee * item.quantity)
+            Storage.objects.filter(name='flour').update(amount=f'{'amount'}' - product.flour * item.quantity)
+            Storage.objects.filter(name='chocolate').update(amount=f'{'amount'}' - product.chocolate * item.quantity)
         
         # پاک کردن سبد خرید
         cart.delete()

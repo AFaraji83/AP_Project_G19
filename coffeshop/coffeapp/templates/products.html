@@ -28,15 +28,17 @@
     {% endif %}
 {% endfor %} {% endcomment %}
     {%for product in products%}
-    <div>
-      {{product.vertical}}
+    <li>
+      <a href="{% url 'coffeapp:products-page' %}?q{{product.vertical}}">{{product.vertical}}</a>
+
+      <a href="{% url 'coffeapp:add-to-cart'product_id=product.id %}">Add to Cart</a>
 
 
 
 
 
 
-    </div>
+    </li>
       {% endfor %}
     {% comment %} {% for price in product_prices %}
     <div>

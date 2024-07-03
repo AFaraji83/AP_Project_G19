@@ -40,3 +40,11 @@ class StorageForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         for field in self.fields.values():
             field.initial = ''
+
+
+class AddToCartForm(forms.Form):
+    quantity = forms.IntegerField(min_value=1, max_value=10)
+
+
+
+

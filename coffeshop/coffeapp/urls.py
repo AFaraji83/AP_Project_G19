@@ -12,9 +12,10 @@ urlpatterns = [
     path('', views.home, name= 'home'),
     path('new-product/', views.createProduct, name='new-product'),
     path('products-page.', views.productsPage, name='products-page'),
-    path('manage-product/',views.manageProduct, name='manage-product')
-]
-
+    path('manage-product/',views.manageProduct, name='manage-product'),
+    path('cart/', views.view_cart, name='cart'),
+    path('add-to-cart/<int:product_id>/', views.add_to_cart, name='add_to_cart'),
+    path('checkout/', views.checkout, name='checkout'),]
 
 
 urlpatterns+= static(settings.MEDIA_URL, documnet_root= settings.MEDIA_ROOT)

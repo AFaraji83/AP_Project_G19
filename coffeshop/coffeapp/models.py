@@ -104,3 +104,12 @@ class Storage(models.Model):
     sugar = models.IntegerField(default=0)
     chocolate = models.IntegerField(default=0)
     flour = models.IntegerField(default=0)
+
+class Cart(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class CartItem(models.Model):
+    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
+    product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)

@@ -128,6 +128,85 @@ def manageProduct(request):
     return render(request, 'manage-product.html', context)
 
 
+
 def salesManagment(request):
     context={}
     return render(request, 'sales-managment.html', context)
+
+@login_required
+def view_cart(request):
+    cart, created = Cart.objects.get_or_create(user=request.user)
+    items = CartItem.objects.filter(cart=cart)
+    total = sum(item.product.price * item.quantity for item in items)
+    return render(request, 'cart.html', {'items': items, 'total': total})
+
+@login_required
+def add_to_cart(request, product_id):
+    product = Products.objects.get(id=product_id)
+    form = AddToCartForm(request.POST or None)
+    
+    if form.is_valid():
+        quantity = form.cleaned_data['quantity']
+        
+        # بررسی موجودی انبار
+        ingredients = {
+            'sugar': product.sugar * quantity,
+            'coffee': product.coffee * quantity,
+            'flour': product.flour * quantity,
+            'chocolate': product.chocolate * quantity
+        }
+        
+        for ingredient, amount in ingredients.items():
+            storage = Storage.objects.get(name=ingredient)
+            if storage.amount < amount:
+                messages.error(request, f'موجودی {ingredient} کافی نیست.')
+                return redirect('product_detail', product_id=product_id)
+        
+        cart, created = Cart.objects.get_or_create(user=request.user)
+        cart_item, created = CartItem.objects.get_or_create(cart=cart, product=product)
+        
+        if not created:
+            cart_item.quantity += quantity
+            cart_item.save()
+        else:
+            cart_item.quantity = quantity
+            cart_item.save()
+        
+        messages.success(request, 'محصول به سبد خرید اضافه شد.')
+        return redirect('view_cart')
+    
+    return render(request, 'add_to_cart.html', {'form': form, 'product': product})
+
+
+
+
+@login_required
+def checkout(request):
+    if request.method == 'POST':
+        order_type = request.POST.get('order_type')
+        cart = Cart.objects.get(user=request.user)
+        items = CartItem.objects.filter(cart=cart)
+        
+        # ایجاد سفارش
+        order = Orders.objects.create(
+            username=request.user.username,
+            products=', '.join([item.product.name for item in items]),
+            purchase_amount=sum(item.product.price * item.quantity for item in items),
+            type=order_type
+        )
+        
+        # کم کردن از موجودی انبار
+        for item in items:
+            product = item.product
+            Storage.objects.filter(name='sugar').update(amount=F('amount') - product.sugar * item.quantity)
+            Storage.objects.filter(name='coffee').update(amount=F('amount') - product.coffee * item.quantity)
+            Storage.objects.filter(name='flour').update(amount=F('amount') - product.flour * item.quantity)
+            Storage.objects.filter(name='chocolate').update(amount=F('amount') - product.chocolate * item.quantity)
+        
+        # پاک کردن سبد خرید
+        cart.delete()
+        
+        messages.success(request, 'سفارش شما با موفقیت ثبت شد.')
+        return redirect('order_confirmation')
+    
+    return redirect('view_cart')

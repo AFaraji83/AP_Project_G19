@@ -1,13 +1,16 @@
+<head>
+  <style></style>
+</head>
 {% load static %}
 <header>
   <div class="navigation">
     <div class="items">
       {% if request.user.is_authenticated %}
-      <img class="sign-out-squre-light" src="../assets/vectors/sign_out_squre_light_4_x2.svg" alt="Sign Out Button" />
-      <img class="trolly" src="../assets/vectors/trolly_3_x2.svg" alt="Shoping Cart Button "/>
-      <img class="wallet" src="../assets/vectors/wallet_2_x2.svg" alt="Recent Purchases Button" />
+      <a href="coffeapp:logout"><img class="sign-out-squre-light" src="/static/vectors/sign_out_squre_light_4_x2.svg" alt="Sign Out Button" /></a>
+      <img class="trolly" src="static/vectors/trolly_3_x2.svg" alt="Shoping Cart Button "/>
+      <a href="coffeapp:order_history"><img class="wallet" src="static/vectors/wallet_2_x2.svg" alt="Recent Purchases Button" /></a>
       {% else %}
-      <img class="sign-in " src="../assets/vectors/sign_out_squre_light_4_x2.svg" alt="Sign in Button">
+      <img class="sign-in " src="static/vectors/slogin-svgrepo-com.svg" alt="Sign in Button">
       {% endif %}
     </div>
     <div class="coffee-shop-logo-whithout-background-1">

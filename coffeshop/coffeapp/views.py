@@ -28,7 +28,7 @@ from .models import *
 def signin(request):
     page = 'login'
     if request.user.is_authenticated:
-        return redirect('home')
+        return redirect('coffeapp:home')
 
     if request.method == 'POST':
         username = request.POST.get('username').lower()
@@ -43,7 +43,7 @@ def signin(request):
 
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return redirect('coffeapp:home')
         else:
             messages.error(request, 'Username OR password does not exit')
 
@@ -53,7 +53,7 @@ def signin(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('home')
+    return redirect('coffeapp: home')
 
 
 def registerPage(request):
@@ -66,7 +66,7 @@ def registerPage(request):
             user.username = user.username.lower()
             user.save()
             login(request, user)
-            return redirect('home')
+            return redirect('coffeapp:home')
         else:
             messages.error(request, 'An error occurred during registration')
 
@@ -82,7 +82,7 @@ def home(request):
     context= {'products': products}
     return render(request, 'home.html', context)
 
-@login_required(login_url='signin')
+@login_required(login_url='coffeapp:signin')
 def productsPage(request):
     q = request.GET.get('q') if request.GET.get('q') != None else ''
     products= Products.objects.filter(Q(vertical__icontains= q))
@@ -100,8 +100,18 @@ def createProduct(request):
         form= ProductsForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('coffeapp:home')
 
     context={'form': form}
     return render(request, 'new_product.html', context)
+
+
+def manageProduct(request):
+    form =StorageForm(request.POST)
+
+
+
+
+    context={'form': form}
+    return render(request, 'manage-product.html', context)
 

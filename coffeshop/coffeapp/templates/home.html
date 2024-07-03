@@ -4,7 +4,7 @@
 
 <div>
   {% for product in products %}
-  <a href="">
+  <a href="{% url 'coffeapp:products-page' %}">
     <div class="image-1">
       {{product.avatar }}
     </div>
